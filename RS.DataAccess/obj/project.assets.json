@@ -2784,11 +2784,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Company RestService\\RestService\\RS.DataAccess\\RS.DataAccess.csproj",
+      "projectUniqueName": "D:\\CompanyRestService\\RestService\\RS.DataAccess\\RS.DataAccess.csproj",
       "projectName": "RS.DataAccess",
-      "projectPath": "D:\\Company RestService\\RestService\\RS.DataAccess\\RS.DataAccess.csproj",
+      "projectPath": "D:\\CompanyRestService\\RestService\\RS.DataAccess\\RS.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Pavel Leevchenko\\.nuget\\packages\\",
-      "outputPath": "D:\\Company RestService\\RestService\\RS.DataAccess\\obj\\",
+      "outputPath": "D:\\CompanyRestService\\RestService\\RS.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -2809,8 +2809,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\Company RestService\\RestService\\RS.Entities\\RS.Entities.csproj": {
-              "projectPath": "D:\\Company RestService\\RestService\\RS.Entities\\RS.Entities.csproj"
+            "D:\\CompanyRestService\\RestService\\RS.Entities\\RS.Entities.csproj": {
+              "projectPath": "D:\\CompanyRestService\\RestService\\RS.Entities\\RS.Entities.csproj"
             }
           }
         }

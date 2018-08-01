@@ -29,5 +29,9 @@ namespace RS.Entities.Entity
         public Guid? MenuId { get; set; }
 
         public virtual Menu Menu { get; set; }
+
+        public Guid? ActionId { get; set; }
+
+        public virtual ICollection<Share> Action { get; set; }
     }
 }

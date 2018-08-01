@@ -674,11 +674,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Company RestService\\RestService\\RS.Entities\\RS.Entities.csproj",
+      "projectUniqueName": "D:\\CompanyRestService\\RestService\\RS.Entities\\RS.Entities.csproj",
       "projectName": "RS.Entities",
-      "projectPath": "D:\\Company RestService\\RestService\\RS.Entities\\RS.Entities.csproj",
+      "projectPath": "D:\\CompanyRestService\\RestService\\RS.Entities\\RS.Entities.csproj",
       "packagesPath": "C:\\Users\\Pavel Leevchenko\\.nuget\\packages\\",
-      "outputPath": "D:\\Company RestService\\RestService\\RS.Entities\\obj\\",
+      "outputPath": "D:\\CompanyRestService\\RestService\\RS.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",

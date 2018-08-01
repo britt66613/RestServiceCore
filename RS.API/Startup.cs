@@ -28,6 +28,12 @@ namespace RS.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.WithOrigins("http://localhost:50864"));
+            });
+
             services.AddDbContext<RestaurantContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -43,6 +49,14 @@ namespace RS.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
+            app.UseCors(builder =>
+       builder.WithOrigins("http://localhost:50864")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials());
 
             app.UseMvc();
         }

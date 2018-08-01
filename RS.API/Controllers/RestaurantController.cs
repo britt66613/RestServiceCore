@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RS.API.Model;
 using RS.Entities.Entity;
 using RS.Services.Interfaces;
 using RS.Services.Services;
@@ -33,13 +34,23 @@ namespace RS.API.Controllers
             return _restaurantService.GetByKey(id);
         }
 
-        [Route("~/api/GetAllObject/{includes}")]
-        [HttpGet]
-        public IEnumerable<Restaurant> GetAllObject(string includes = null)
+        //http://localhost:53399/api/restaurant/GetAll?includes=Location&includes=Action
+        [Route("GetAll")]
+        [HttpPost]
+        public IEnumerable<Restaurant> GetAll(string [] includes)
         {
-            var result = _restaurantService.GetAll(new[] { "Menu", "Location", "FoodMenus" }).ToList();
+
+            var result = _restaurantService.GetAll(includes);
             return result;
         }
+
+        //[Route("Filter")]
+        //[HttpPost]
+        //public IEnumerable<Restaurant> Filter([FromBody] FilterModel model)
+        //{
+        //    var result = _restaurantService.Filter(model);
+        //    return result;
+        //}
 
         // POST api/values
         [Route("~/api/AddRestaurant")]
@@ -51,14 +62,17 @@ namespace RS.API.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(Guid id, [FromBody]Restaurant restaurant)
         {
+            if(ModelState.IsValid)
+            _restaurantService.Update(restaurant);
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
+            _restaurantService.Delete(id);
         }
     }
 }

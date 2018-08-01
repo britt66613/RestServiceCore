@@ -8,8 +8,6 @@ namespace RS.Entities.Entity
     {
         //Guid
         public Guid Id { get; set; }
-        public Guid? ActionId { get; set; }
-        public virtual Share Action { get; set; }
         public DateTime Time { get; set; }
         public virtual ICollection<FoodMenu> FoodMenus { get; set; }
         public virtual ICollection<BarMenu> BarMenus { get; set; }

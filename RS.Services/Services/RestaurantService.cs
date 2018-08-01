@@ -57,8 +57,8 @@ namespace RS.Services.Services
 
         public IEnumerable<Restaurant> GetAll(string[] includes = null)
         {
-            var result = EntityRepo.All().Include(restaurant => restaurant.Location)
-                                        .Include(restaurant => restaurant.Menu).ThenInclude(menu => menu.FoodMenus);
+            //var result = EntityRepo.All(includes).Include(restaurant => restaurant.Menu).ThenInclude(menu => menu.FoodMenus);
+            var result = EntityRepo.All(includes);
             return result;
         }
 

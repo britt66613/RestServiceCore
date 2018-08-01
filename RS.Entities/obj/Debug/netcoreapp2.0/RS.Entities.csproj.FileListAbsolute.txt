@@ -16,3 +16,12 @@ D:\Company RestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entiti
 D:\Company RestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entities.AssemblyInfo.cs
 D:\Company RestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entities.dll
 D:\Company RestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entities.pdb
+D:\CompanyRestService\RestService\RS.Entities\bin\Debug\netcoreapp2.0\RS.Entities.deps.json
+D:\CompanyRestService\RestService\RS.Entities\bin\Debug\netcoreapp2.0\RS.Entities.dll
+D:\CompanyRestService\RestService\RS.Entities\bin\Debug\netcoreapp2.0\RS.Entities.pdb
+D:\CompanyRestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entities.csprojResolveAssemblyReference.cache
+D:\CompanyRestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entities.csproj.CoreCompileInputs.cache
+D:\CompanyRestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entities.AssemblyInfoInputs.cache
+D:\CompanyRestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entities.AssemblyInfo.cs
+D:\CompanyRestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entities.dll
+D:\CompanyRestService\RestService\RS.Entities\obj\Debug\netcoreapp2.0\RS.Entities.pdb

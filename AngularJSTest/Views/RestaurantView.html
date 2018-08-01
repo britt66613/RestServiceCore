@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="../Scripts/Angular/angular.js"></script>
+    <script src="../Scripts/MyScript/Script.js"></script>
+    <script src="../Scripts/MyScript/Filter.js"></script>
+    <link href="../Style.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Status</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="restaurant in restaurants">
+                    <td>{{restaurant.id}}</td>
+                    <td>{{restaurant.status | status}}</td>
+                    <td>{{restaurant.name}}</td>
+                    <td>{{restaurant.location.address}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

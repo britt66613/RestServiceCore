@@ -24,3 +24,16 @@ D:\Company RestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Servic
 D:\Company RestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Services.AssemblyInfo.cs
 D:\Company RestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Services.dll
 D:\Company RestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Services.pdb
+D:\CompanyRestService\RestService\RS.Services\bin\Debug\netcoreapp2.0\RS.Services.deps.json
+D:\CompanyRestService\RestService\RS.Services\bin\Debug\netcoreapp2.0\RS.Services.dll
+D:\CompanyRestService\RestService\RS.Services\bin\Debug\netcoreapp2.0\RS.Services.pdb
+D:\CompanyRestService\RestService\RS.Services\bin\Debug\netcoreapp2.0\RS.DataAccess.dll
+D:\CompanyRestService\RestService\RS.Services\bin\Debug\netcoreapp2.0\RS.Entities.dll
+D:\CompanyRestService\RestService\RS.Services\bin\Debug\netcoreapp2.0\RS.DataAccess.pdb
+D:\CompanyRestService\RestService\RS.Services\bin\Debug\netcoreapp2.0\RS.Entities.pdb
+D:\CompanyRestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Services.csprojResolveAssemblyReference.cache
+D:\CompanyRestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Services.csproj.CoreCompileInputs.cache
+D:\CompanyRestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Services.AssemblyInfoInputs.cache
+D:\CompanyRestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Services.AssemblyInfo.cs
+D:\CompanyRestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Services.dll
+D:\CompanyRestService\RestService\RS.Services\obj\Debug\netcoreapp2.0\RS.Services.pdb
