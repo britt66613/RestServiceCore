@@ -1,4 +1,5 @@
-﻿using RS.Entities.Interfaces;
+﻿using RS.Entities.Common;
+using RS.Entities.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,28 +8,31 @@ using System.Text;
 
 namespace RS.Services
 {
-    public interface IBaseService<T>  where T : class, IIdentifier<Guid>
+    public interface IBaseGetService<T> : IDisposable where T : class, IIdentifier<Guid>
     {
-        IEnumerable<T> GetAll(string[] includes = null);
+        IEnumerable<T> All(string[] includes = null);
 
         T Find(Expression<Func<T, bool>> predicate, string[] includes = null);
 
-        T GetByKey(Guid id);
-        
+        T FindByKey(Guid id);
+
         IEnumerable<T> Filter(Expression<Func<T, bool>> predicate, string[] includes = null);
 
         bool Contains(Expression<Func<T, bool>> predicate);
+    }
 
-        T Create(T entity);
+    public interface IBaseService<T> : IBaseGetService<T> where T : class, IIdentifier<Guid>
+    {        
+        ServiceResult<T> Create(T entity);
 
-        void Update(T entity);
+        ServiceResult Update(T entity);
 
-        void Update(params T[] entities);
+        ServiceResult Update(params T[] entities);
 
-        void Delete(Guid id);
+        ServiceResult Delete(Guid id);
 
-        void Delete(T entity);
+        ServiceResult Delete(T entity);
 
-        void Delete(Expression<Func<T, bool>> predicate);
+        ServiceResult Delete(Expression<Func<T, bool>> predicate);
     }
 }

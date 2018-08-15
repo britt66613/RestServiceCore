@@ -1,0 +1,20 @@
+﻿<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Status</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Delete restaurant</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="restaurant in restaurants">
+            <td>{{restaurant.id}}</td>
+            <td>{{restaurant.status | status}}</td>
+            <td>{{restaurant.name}}</td>
+            <td>{{restaurant.location.address}}</td>
+            <td><div ng-click="Delete(restaurant.id)">Delete</div></td>
+        </tr>
+    </tbody>
+</table>

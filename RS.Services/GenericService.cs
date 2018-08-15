@@ -1,5 +1,6 @@
 ﻿using RS.DataAccess;
 using RS.DataAccess.Db;
+using RS.Entities.Common;
 using RS.Entities.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -47,7 +48,7 @@ namespace RS.Services
             }
         }
 
-        public virtual IEnumerable<T> GetAll(string[] includes = null)
+        public virtual IEnumerable<T> All(string[] includes = null)
         {
             try
             {
@@ -73,7 +74,7 @@ namespace RS.Services
             }
         }
 
-        public virtual T GetByKey(Guid id)
+        public virtual T FindByKey(Guid id)
         {
             try
             {
@@ -99,77 +100,100 @@ namespace RS.Services
             }
         }
 
-        public virtual T Create(T entity)
+        public virtual ServiceResult<T> Create(T entity)
         {
             try
             {
                 if (entity == null) throw new ArgumentException(nameof(entity));
+                var result = new ServiceResult<T>();
                 var queryResult = EntityRepo.Create(entity);
-                return queryResult.Entity;
+                result.Result = queryResult;
+                return result;
             }
             catch (Exception ex)
             {
-                throw;
+                return new ServiceResult<T>(ex);
             }
         }
 
-        public virtual void Update(T entity)
+        public virtual ServiceResult Update(T entity)
         {
             try
             {
-                EntityRepo.Update(entity);
+                if (entity == null) throw new ArgumentException(nameof(entity));
+                var result = new ServiceResult();
+                var queryResult = EntityRepo.Update(entity);
+                return result;
             }
             catch (Exception ex)
             {
+                return new ServiceResult(ex);
             }
         }
 
-        public virtual void Update(params T[] entities)
+        public virtual ServiceResult Update(params T[] entities)
         {
             try
             {
+                var result = new ServiceResult();
                 foreach (var entity in entities)
                 {
                     EntityRepo.Update(entity);
                 }
+                return result;
+
             }
             catch (Exception ex)
             {
+                return new ServiceResult(ex);
             }
         }
 
-        public virtual void Delete(T entity)
+        public virtual ServiceResult Delete(T entity)
         {
             try
             {
+                var result = new ServiceResult();
                 EntityRepo.Delete(entity);
+                return result;
             }
             catch (Exception ex)
             {
+                return new ServiceResult(ex);
             }
         }
 
-        public virtual void Delete(Guid id)
+        public virtual ServiceResult Delete(Guid id)
         {
             try
             {
+                var result = new ServiceResult();
+
                 var queryResult = EntityRepo.FindByKey(id);
 
                 EntityRepo.Delete(queryResult);
+
+                return result;
             }
             catch (Exception ex)
             {
+                return new ServiceResult(ex);
             }
         }
 
-        public virtual void Delete(Expression<Func<T, bool>> predicate)
+        public virtual ServiceResult Delete(Expression<Func<T, bool>> predicate)
         {
             try
             {
+                var result = new ServiceResult();
+
                 EntityRepo.Delete(predicate);
+
+                return result;
             }
             catch (Exception ex)
             {
+                return new ServiceResult(ex);
             }
         }
     }

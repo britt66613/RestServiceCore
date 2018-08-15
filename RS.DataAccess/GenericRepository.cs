@@ -78,7 +78,7 @@ namespace RS.DataAccess
             var result = await query.FirstOrDefaultAsync(predicate);
             return result;
         }
-        public virtual T FindByKey(object key)
+        public virtual T FindByKey(Guid key)
         {
             return DbSet.Find(key);
         }
@@ -120,11 +120,11 @@ namespace RS.DataAccess
 
         //=====================================================
 
-        public EntityEntry<T> Create(T item)  
+        public T Create(T item)  
         {
-            var result = Context.Set<T>().Add(item);
+            var result = DbSet.Add(item);
             Context.SaveChanges();
-            return result;     
+            return result.Entity;     
         }
 
         public async Task<EntityEntry<T>> CreateAsync(T item)

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="helloApp">
+<head>
+    <title>Hello AngularJS - Add Table Row Dynamically</title>
+    <link rel="stylesheet"
+          href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+    <script src="../Scripts/MyScript/Script2.js"></script>
+</head>
+<!-- Controller name goes here -->
+<body ng-controller="CompanyCtrl">
+    <table class="table">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Employees
+            </th>
+            <th>
+                Head Office
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        <tr ng-repeat="company in companies">
+            <td>{{company.name}}</td>
+            <td>{{company.employees}}</td>
+            <td>{{company.headoffice}}</td>
+            <td>
+                <input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow(company.name)" />
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

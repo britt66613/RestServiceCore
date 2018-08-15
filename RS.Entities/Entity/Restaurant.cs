@@ -20,10 +20,10 @@ namespace RS.Entities.Entity
 
         public string CategoryList { get; set; }
 
-        public DateTime Time { get; set; }
+        public DateTime StartTime { get; set; }
 
         public Guid? LocationId { get; set; }
-
+        
         public virtual Location Location { get; set; }
 
         public Guid? MenuId { get; set; }

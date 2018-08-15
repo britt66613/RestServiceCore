@@ -11,13 +11,13 @@ using RS.Services.Services;
 namespace RS.API.Controllers
 {
     [Route("api/[controller]")]
-    public class RestaurantController : Controller
+    public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantService<Restaurant> _restaurantService;
 
         public RestaurantController(IRestaurantService<Restaurant> restaurantService)
         {
-            _restaurantService = restaurantService;
+            _restaurantService = restaurantService;            
         }
 
         // GET api/values
@@ -28,19 +28,19 @@ namespace RS.API.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public Restaurant Get(Guid id)
-        {
-            return _restaurantService.GetByKey(id);
-        }
+        //[HttpGet]
+        //public Restaurant Get(Guid id)
+        //{
+        //    return _restaurantService.GetByKey(id);
+        //}
 
         //http://localhost:53399/api/restaurant/GetAll?includes=Location&includes=Action
         [Route("GetAll")]
         [HttpPost]
-        public IEnumerable<Restaurant> GetAll(string [] includes)
+        public IEnumerable<Restaurant> GetAll([FromBody] GetModel model)
         {
 
-            var result = _restaurantService.GetAll(includes);
+            var result = _restaurantService.All(model.includes);
             return result;
         }
 
@@ -55,9 +55,14 @@ namespace RS.API.Controllers
         // POST api/values
         [Route("~/api/AddRestaurant")]
         [HttpPost]
-        public void Post([FromBody]Restaurant restaurant)
+        public ActionResult Post([FromBody]Restaurant restaurant)
         {
-            _restaurantService.Create(restaurant);
+            if (ModelState.IsValid)
+            {
+                var result = _restaurantService.Create(restaurant);
+                return Ok();
+            }
+            else return BadRequest(ModelState);
         }
 
         // PUT api/values/5
@@ -69,10 +74,11 @@ namespace RS.API.Controllers
         }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(Guid id)
+        [Route("Delete")]
+        [HttpPost]
+        public void Delete([FromBody] string id)
         {
-            _restaurantService.Delete(id);
+            _restaurantService.Delete(Guid.Parse(id));
         }
     }
 }

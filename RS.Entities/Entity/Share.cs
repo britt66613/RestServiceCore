@@ -9,7 +9,7 @@ namespace RS.Entities.Entity
     {
         public Guid Id { get; set; }
         public string Description { get; set; }
-        public DateTime Time { get; set; }
+        public DateTime UpdateTime { get; set; }
         public Guid RestaurantId { get; set; }
         public Restaurant Restaurant { get; set; }
     }

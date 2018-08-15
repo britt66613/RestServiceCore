@@ -5,7 +5,6 @@
                 return "Open";
             case 1:
                 return "Close";
-
         }
     }
 })

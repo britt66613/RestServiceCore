@@ -52,11 +52,11 @@ namespace RS.API
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            app.UseCors(builder =>
-       builder.WithOrigins("http://localhost:50864")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials());
+            app.UseCors(builder => builder.WithOrigins("http://localhost:50864")
+                                          .AllowAnyHeader()
+                                          .AllowAnyMethod()
+                                          .AllowCredentials());
+
 
             app.UseMvc();
         }

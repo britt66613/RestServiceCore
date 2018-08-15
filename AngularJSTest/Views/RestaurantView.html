@@ -1,31 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <script src="../Scripts/Angular/angular.js"></script>
+    <base href="/" />
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
     <script src="../Scripts/MyScript/Script.js"></script>
     <script src="../Scripts/MyScript/Filter.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
     <link href="../Style.css" rel="stylesheet" />
 </head>
 <body ng-app="myModule">
     <div ng-controller="myController">
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Status</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="restaurant in restaurants">
-                    <td>{{restaurant.id}}</td>
-                    <td>{{restaurant.status | status}}</td>
-                    <td>{{restaurant.name}}</td>
-                    <td>{{restaurant.location.address}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <div>
+            <button ng-click="ShowTable()">Show tabla</button>
+            <button ng-click="ShowForm()">Create restaurant</button>
+            <div ng-include="partialView"></div>                       
+        </div>        
+    </div>    
 </body>
 </html>
+

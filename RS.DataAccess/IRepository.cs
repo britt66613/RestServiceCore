@@ -20,13 +20,13 @@ namespace RS.DataAccess
     {
         IQueryable<T> All(string[] includes = null);
 
-        EntityEntry<T> Create(T item);
+        T Create(T item);
 
         T Find(Expression<Func<T, bool>> predicate, string[] includes = null);
 
         Task<T> FindAsync(Expression<Func<T, bool>> predicate, string[] includes = null);
 
-        T FindByKey(object key);
+        T FindByKey(Guid key);
 
         Task<T> FindByKeyAsync(object key);
 

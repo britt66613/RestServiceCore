@@ -6,6 +6,7 @@ using RS.Entities.Entity;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using RS.DataAccess.Db;
+using RS.Entities.Common;
 
 namespace RS.Services.Services
 {
@@ -13,72 +14,46 @@ namespace RS.Services.Services
     {
         public RestaurantService(RestaurantContext context) : base(context) { }
 
-        public bool Contains(Expression<Func<Restaurant, bool>> predicate)
+        public override ServiceResult<Restaurant> Create(Restaurant entity)
         {
-            var result = EntityRepo.Contains(predicate);
+            try
+            {
+                var result = base.Create(entity);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResult<Restaurant>(ex);                
+            }
 
-            return result;
         }
 
-        public Restaurant Create(Restaurant entity)
+        public override ServiceResult Update(Restaurant entity)
         {
-            var queryResult = EntityRepo.Create(entity);
-            return queryResult.Entity;
+            try
+            {
+                var result = new ServiceResult();
+                result = base.Update(entity);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResult(ex);
+            }            
         }
 
-        public void Delete(Guid id)
+        public override ServiceResult Update(params Restaurant[] entities)
         {
-            var queryResult = EntityRepo.FindByKey(id);
-
-            EntityRepo.Delete(queryResult);
-        }
-
-        public void Delete(Restaurant entity)
-        {
-            EntityRepo.Delete(entity);
-        }
-
-        public void Delete(Expression<Func<Restaurant, bool>> predicate)
-        {
-            EntityRepo.Delete(predicate);
-        }
-
-        public IEnumerable<Restaurant> Filter(Expression<Func<Restaurant, bool>> predicate)
-        {
-            var result = EntityRepo.Filter(predicate);
-            return result;
-        }
-
-        public Restaurant Find(Expression<Func<Restaurant, bool>> predicate, string[] includes = null)
-        {
-            var result = EntityRepo.Find((predicate), includes);
-            return result;
-        }
-
-        public IEnumerable<Restaurant> GetAll(string[] includes = null)
-        {
-            //var result = EntityRepo.All(includes).Include(restaurant => restaurant.Menu).ThenInclude(menu => menu.FoodMenus);
-            var result = EntityRepo.All(includes);
-            return result;
-        }
-
-        public Restaurant GetByKey(Guid id)
-        {
-            var result = EntityRepo.FindByKey(id);
-            return result;
-        }
-
-        public void Update(Restaurant entity)
-        {
-            EntityRepo.Update(entity);
-        }
-
-        public void Update(params Restaurant[] entities)
-        {
-            foreach (var entity in entities)
-                {
-                    EntityRepo.Update(entity);
-                }
+            try
+            {
+                var result = new ServiceResult();
+                result =  base.Update(entities);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResult(ex);
+            }
         }
     }
 }

@@ -37,9 +37,12 @@ D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.API.runtimec
 D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.API.runtimeconfig.dev.json
 D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.API.dll
 D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.API.pdb
+D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\AngularJSTest.dll
 D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.DataAccess.dll
 D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.Entities.dll
 D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.Services.dll
+D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\AngularJSTest.pdb
+D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\AngularJSTest.dll.config
 D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.Entities.pdb
 D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.Services.pdb
 D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\RS.DataAccess.pdb
@@ -49,6 +52,3 @@ D:\CompanyRestService\RestService\RS.API\obj\Debug\netcoreapp2.0\RS.API.Assembly
 D:\CompanyRestService\RestService\RS.API\obj\Debug\netcoreapp2.0\RS.API.AssemblyInfo.cs
 D:\CompanyRestService\RestService\RS.API\obj\Debug\netcoreapp2.0\RS.API.dll
 D:\CompanyRestService\RestService\RS.API\obj\Debug\netcoreapp2.0\RS.API.pdb
-D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\AngularJSTest.dll
-D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\AngularJSTest.pdb
-D:\CompanyRestService\RestService\RS.API\bin\Debug\netcoreapp2.0\AngularJSTest.dll.config

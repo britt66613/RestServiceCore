@@ -8,7 +8,7 @@ namespace RS.Entities.Entity
     {
         //Guid
         public Guid Id { get; set; }
-        public DateTime Time { get; set; }
+        public DateTime UpdateTime { get; set; }
         public virtual ICollection<FoodMenu> FoodMenus { get; set; }
         public virtual ICollection<BarMenu> BarMenus { get; set; }
         public virtual ICollection<HookahMenu> HookahMenus { get; set; }

@@ -3,7 +3,7 @@ D:\CompanyRestService\RestService\AngularJSTest\bin\AngularJSTest.dll
 D:\CompanyRestService\RestService\AngularJSTest\bin\AngularJSTest.pdb
 D:\CompanyRestService\RestService\AngularJSTest\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\CompanyRestService\RestService\AngularJSTest\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\CompanyRestService\RestService\AngularJSTest\obj\Debug\AngularJSTest.csprojResolveAssemblyReference.cache
 D:\CompanyRestService\RestService\AngularJSTest\obj\Debug\AngularJSTest.csproj.CoreCompileInputs.cache
 D:\CompanyRestService\RestService\AngularJSTest\obj\Debug\AngularJSTest.dll
 D:\CompanyRestService\RestService\AngularJSTest\obj\Debug\AngularJSTest.pdb
+D:\CompanyRestService\RestService\AngularJSTest\obj\Debug\AngularJSTest.csprojResolveAssemblyReference.cache
